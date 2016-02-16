@@ -21,6 +21,7 @@ public class Alfil extends Pieza {
         boolean valido = false;
         if (mov.esDiagonal()==true){
         
+            
         valido =true;
         }
         return valido;
