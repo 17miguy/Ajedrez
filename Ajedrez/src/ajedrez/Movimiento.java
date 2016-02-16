@@ -53,25 +53,27 @@ public class Movimiento {
         return horizontal;
 
     }
-    public boolean esDiagonal(){
-        boolean diagonal=false;
-  
-        if(saltoHorizontal()==saltoVertical()){
-        
-    diagonal=true;
+
+    public boolean esDiagonal() {
+        boolean diagonal = false;
+
+        if (saltoHorizontal() == saltoVertical()) {
+
+            diagonal = true;
+        }
+        return diagonal;
+
     }
-    return diagonal;
+
+    public int saltoHorizontal() {
+
+        return posInicial.getFila() - posFinal.getFila();
+    }
+
+    public int saltoVertical() {
+
+        return posInicial.getColumna() - posFinal.getColumna();
+    }
     
-    }
-    
-    public int saltoHorizontal(){
-   
-    return posInicial.getFila() - posFinal.getFila();
-    }
-        public int saltoVertical(){
-   
-    return posInicial.getColumna() - posFinal.getColumna();
-    }
-        
 
 }

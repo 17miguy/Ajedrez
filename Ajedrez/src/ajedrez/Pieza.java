@@ -39,13 +39,22 @@ public abstract class Pieza {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public abstract boolean validoMovimiento(Movimiento mov);
-     
-    public abstract boolean pintarPieza();
+
     
-   
     
+    
+    public  String pintarPieza(){
+        
+        return nombre+color;
+    
+    
+    
+    }
+}
+  
     
     
 
-}
+
