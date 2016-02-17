@@ -72,12 +72,12 @@ public class Movimiento {
 
     public int saltoHorizontal() {
 
-        return posInicial.getFila() - posFinal.getFila();
+        return posInicial.getColumna() - posFinal.getColumna();
     }
 
     public int saltoVertical() {
+        return posInicial.getFila() - posFinal.getFila();
 
-        return posInicial.getColumna() - posFinal.getColumna();
     }
 
 }
