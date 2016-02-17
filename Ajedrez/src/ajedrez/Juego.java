@@ -16,6 +16,13 @@ public class Juego {
        
        Tablero juego1 = new Tablero();
        juego1.pintarTablero();
+       Posicion inicial = new Posicion(0, 0);
+       Posicion finale = new Posicion (5,0);
+       Movimiento primero = new Movimiento(inicial, finale);
+       juego1.moverPieza(primero);
+       System.out.println("");
+       System.out.println("");
+       juego1.pintarTablero();
        
        }
    

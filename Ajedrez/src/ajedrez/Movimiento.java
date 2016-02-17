@@ -14,6 +14,11 @@ public class Movimiento {
     private Posicion posInicial;
     private Posicion posFinal;
 
+    public Movimiento(Posicion posInicial, Posicion posFinal) {
+        this.posInicial = posInicial;
+        this.posFinal = posFinal;
+    }
+
     public Posicion getPosInicial() {
         return posInicial;
     }
@@ -74,6 +79,5 @@ public class Movimiento {
 
         return posInicial.getColumna() - posFinal.getColumna();
     }
-    
 
 }

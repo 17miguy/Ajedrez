@@ -10,7 +10,8 @@ package ajedrez;
  * @author dam1
  */
 public class Tablero {
-        public Pieza tabla[][] = new Pieza[8][8];
+
+    public Pieza tabla[][] = new Pieza[8][8];
 
     public Pieza[][] getTabla() {
         return tabla;
@@ -19,8 +20,6 @@ public class Tablero {
     public void setTabla(Pieza[][] tabla) {
         this.tabla = tabla;
     }
-
-
 
     public Tablero() {
         tabla[7][0] = new Torre("B");
@@ -63,8 +62,8 @@ public class Tablero {
         }
         return hayp;
     }
-        
-        public boolean hayPieza(Posicion pos) {
+
+    public boolean hayPieza(Posicion pos) {
 
         boolean hayp = false;
         if (tabla[pos.getFila()][pos.getColumna()] != null) {
@@ -72,37 +71,42 @@ public class Tablero {
             hayp = true;
 
         }
-        
 
         return hayp;
 
     }
-        //public boolean hayPiezasEntre(Movimiento mov){boolean hayp = false;}
-            
-          
+    public boolean hayPiezasEntre(Movimiento mov){
+        boolean hayp = false;
+    if(mov.esVertical() && mov.saltoVertical()>0){
         
-        
+        for(int i=mov.getPosInicial().)
+    
+    
+    }
+    
+    
+    }
 
     public void moverPieza(Movimiento mov) {
         tabla[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = tabla[mov.getPosInicial().getFila()][mov.getPosInicial().getColumna()];
         tabla[mov.getPosInicial().getFila()][mov.getPosInicial().getColumna()] = null;
     }
-    
-    public void pintarTablero(){
-        for(int i=0;i<8;i++){
-            
-           for(int u=0;u<8;u++){
-               if(tabla[i][u]!=null){
-               System.out.print((tabla[i][u]).pintarPieza());}
-               else{System.out.print("00");}
-                   
-           
-           
-           }
-            System.out.println("");
-    }
-    
-    
 
-}
+    public void pintarTablero() {
+        for (int i = 0; i < 8; i++) {
+
+            for (int u = 0; u < 8; u++) {
+                if (tabla[i][u] != null) {
+                    System.out.print((tabla[i][u]).pintarPieza());
+                    System.out.print(" ");
+                } else {
+                    System.out.print("00");
+                    System.out.print(" ");
+                }
+
+            }
+            System.out.println("");
+        }
+
+    }
 }
